@@ -5,7 +5,8 @@
  */
 
 body {
-  padding-top: 54px;
+  padding-top: 44px;
+  color: red;
 }
 
 @media (min-width: 992px) {
