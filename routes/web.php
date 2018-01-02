@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('posts.show');
-});
+// Route::get('/', function () {
+//     return view('posts.show');
+// });
+
+Route::get('/', 'PostController@index');
