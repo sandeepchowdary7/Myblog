@@ -16,3 +16,14 @@
 // });
 
 Route::get('/', 'PostController@index');
+Route::get('/post', 'PostController@index');
+
+Route::get('/post/{post}', 'PostController@show');
+
+Route::get('/posts/create', 'PostController@create');
+
+Route::post('/posts', 'PostController@store');
+
+
+
+Route::get('/About', 'Aboutus@index');

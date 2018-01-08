@@ -1,7 +1,7 @@
  <!-- Jumbotron -->
   <div class="jumbotron test">
 
-    <h1>Welcome to Lara-World</h1>
+    <h1>Welcome To <strong> LARA@Leader </strong></h1>
 
     <p class="lead">This blog is all about Laravel stuff. Who are Epistemophile about Laravel. Welcome for you guys! I'm just Sharing my skills here. Thanks all. Work Hard n Learn more.  </p>
 
@@ -15,12 +15,14 @@
 
   .jumbotron {
   text-align: center;
-  background-color: transparent;
-  padding-top: 2cm;
+  background-color: #e9ecef;
+  padding-top: 95px;
+  height: 289.5906px;
+  color: rgb(77, 120, 125);
 }
 .jumbotron .btn {
-  padding: 14px 24px;
-  font-size: 21px;
+  padding: 30px;
+  font-size: 20px;
 }
   	
   </style>

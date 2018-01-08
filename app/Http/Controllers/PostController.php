@@ -1,9 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class PostController extends Controller
 {
@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = post::latest()->paginate(3); 
+        $posts = Post::latest()->paginate(2); 
         
         return view('posts.index',compact('posts'));
 
@@ -26,8 +26,9 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
+    { 
+         return view('posts.create');
+
     }
 
     /**
@@ -38,7 +39,20 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate(request(), [
+
+            'title' => 'required',
+            'body'  => 'required'
+
+        ]);
+
+        Post::create([
+            'title' => request('title'),
+            'body' => request('body'),
+            // 'user_id' => auth()->id
+        ]);
+
+        return redirect('/post');
     }
 
     /**
@@ -47,9 +61,10 @@ class PostController extends Controller
      * @param  \App\post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(post $post)
+    public function show(Post $post)
     {
-        //
+
+        return view('posts.show',compact('post'));
     }
 
     /**
