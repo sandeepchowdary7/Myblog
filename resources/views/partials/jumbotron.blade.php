@@ -16,12 +16,12 @@
   .jumbotron {
   text-align: center;
   background-color: #e9ecef;
-  padding-top: 95px;
+  padding-top: 100px;
   height: 289.5906px;
   color: rgb(77, 120, 125);
 }
 .jumbotron .btn {
-  padding: 30px;
+  padding: 20px;
   font-size: 20px;
 }
   	

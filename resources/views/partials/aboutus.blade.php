@@ -42,7 +42,7 @@
     height: 400px;"></div>
         <div class="one_half">
           <h2>Sandeep Choudary</h2>
-          <p>Hie, welcome to my blog. I'm a Laravel enthusiast, I'm always much intested about Laravel framework to create new websites. I believe this is the powerful PHP Framework, where developers life made easy. It has an awesome and cool features. All the best who are learning Laravel.</p>
+          <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hie, welcome to my blog. I'm a Laravel enthusiast, I'm always much interested about Laravel framework to create new websites. I believe this is the powerful PHP Framework, where developers life made easy. It has an awesome and cool features. (i.e. Eloquent, Artisan ..etc) All the best everyone who are learning Laravel.</p>
           <ul>
             <li>PHP - Laravel</li>
             <li>CMS (Drupal) </li>

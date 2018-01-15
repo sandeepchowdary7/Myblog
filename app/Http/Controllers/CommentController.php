@@ -1,12 +1,11 @@
 <?php
+
 namespace App\Http\Controllers;
 
-use App\post;
+use App\comment;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Input;
-use DB;
 
-class PostController extends Controller
+class CommentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,13 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-       // $posts = post::latest()->paginate(5); 
-        //$posts = post::all(); 
-
-        $posts = post::paginate(2);
-        
-        return view('posts.index',compact('posts'));
-
+        //
     }
 
     /**
@@ -30,9 +23,8 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    { 
-         return view('posts.create');
-
+    {
+        //
     }
 
     /**
@@ -43,41 +35,27 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate(request(), [
-
-            'title' => 'required',
-            'body'  => 'required'
-
-        ]);
-
-        Post::create([
-            'title' => request('title'),
-            'body' => request('body'),
-            // 'user_id' => auth()->id
-        ]);
-
-        return redirect('/post');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\post  $post
+     * @param  \App\comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function show(post $post)
+    public function show(comment $comment)
     {
-
-        return view('posts.show',compact('post'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\post  $post
+     * @param  \App\comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function edit(post $post)
+    public function edit(comment $comment)
     {
         //
     }
@@ -86,10 +64,10 @@ class PostController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\post  $post
+     * @param  \App\comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, post $post)
+    public function update(Request $request, comment $comment)
     {
         //
     }
@@ -97,10 +75,10 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\post  $post
+     * @param  \App\comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(post $post)
+    public function destroy(comment $comment)
     {
         //
     }

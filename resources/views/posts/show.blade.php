@@ -33,56 +33,54 @@
 
           <p> {{ $post->body }} </p>
 
+        </form>
+
+        <!-- orginal comment sec -->
+
           <hr>
 
           <!-- Comments Form -->
           <div class="card my-4">
+            <ul class="list-group"> 
+
+      @foreach($post->comments as $comment)
+
+      <li class="list-group-item">
+
+        <strong>
+
+          {{ $comment->created_at->diffForHumans()}} : &nbsp;
+
+        </strong>
+
+        {{ $comment->body }}
+
+      </li>
+
+      @endforeach
+
+    </ul>
+
             <h5 class="card-header">Leave a Comment:</h5>
             <div class="card-body">
-              <form>
+              <form method="POST" action="{{ url ("/post/{$post->id}/name") }}"> 
+                   {{ csrf_field() }}
+
+            <!-- <h5 class="card-header">Enter Name:</h5> -->
+            <div class="form-group">
+                  <input type="name" name="name"  class= "form-control" placeholder="Enter Name ...">
+                </div>
+              <form method="POST" action="{{ url ("/post/{$post->id}/comment") }}"> 
+                   {{ csrf_field() }}
                 <div class="form-group">
-                  <textarea class="form-control" rows="3"></textarea>
+                  <textarea class="form-control" rows="3" placeholder="Enter Comment  Here...."></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
               </form>
+            </form>
             </div>
           </div>
-
-          <!-- Single Comment -->
-          <div class="media mb-4">
-            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-            <div class="media-body">
-              <h5 class="mt-0">Commenter Name</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-            </div>
-          </div>
-
-          <!-- Comment with nested comments -->
-          <div class="media mb-4">
-            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-            <div class="media-body">
-              <h5 class="mt-0">Commenter Name</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-
-              <div class="media mt-4">
-                <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-                <div class="media-body">
-                  <h5 class="mt-0">Commenter Name</h5>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                </div>
-              </div>
-
-              <div class="media mt-4">
-                <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-                <div class="media-body">
-                  <h5 class="mt-0">Commenter Name</h5>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                </div>
-              </div>
-
-            </div>
-          </div>
-           </form>
-        </div>
+ 
+  </div>
 
     @endsection

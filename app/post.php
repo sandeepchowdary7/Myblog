@@ -19,9 +19,9 @@ class post extends Model
 		'body'
 	];
 
-	// public function comments()
-	// {
-	// 	return $this->hasMany(Comment::class);
-	// }
+	public function comments()
+	{
+		return $this->hasMany(Comment::class);
+	}
 
 }

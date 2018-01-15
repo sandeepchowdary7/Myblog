@@ -1,3 +1,4 @@
+
 <!-- Sidebar Widgets Column -->
         <div class="col-md-4">
 
@@ -51,7 +52,7 @@
 
           <!-- Side Widget -->
           <div class="card my-4">
-            <h5 class="card-header">Side Widget</h5>
+            <h5 class="card-header">Stats</h5>
             <div class="card-body">
               You can put anything you want inside of these side widgets. They are easy to use, and feature for the new card containers!
             </div>

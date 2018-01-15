@@ -24,6 +24,9 @@ Route::get('/posts/create', 'PostController@create');
 
 Route::post('/posts', 'PostController@store');
 
+Route::post('/post/{post}/comment', 'CommentController@store');
+
+
 
 
 Route::get('/About', 'Aboutus@index');

@@ -1,16 +1,21 @@
 @extends('master')
 
 @section('content')
-<!-- Example row of columns -->
 
-<div class="container">
-  
-    @foreach ($posts as $post)
+      @if($posts->count())
 
-      @include('posts.post')
+            @foreach($posts as $post)
 
-    @endforeach
+                  @include('posts.post')
 
-</div>
+            @endforeach 
+
+            {{ $posts->links() }}
+
+      @else  
+
+            <p>No posts found</p>
+
+      @endif  
 
 @endsection

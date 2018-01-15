@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,11 +31,11 @@
 
         @yield('content')
 
-        @include('partials.sidebar')
-
       </div>
       <!-- /.row -->
 
+       @include('partials.sidebar')
+      
     </div>
     <!-- /.container -->
 
@@ -50,5 +49,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
   </body>
+
+<style type="text/css">
+
+  .pagination {
+    margin-bottom: 20px;
+    padding-right: 500px;
+    width: 300px;
+    height: 23px;
+    font-size: 25px;
+    color: red;
+    padding-left: 500px;
+ }
+    
+  </style>
 
 </html>

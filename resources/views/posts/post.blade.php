@@ -1,35 +1,18 @@
-@extends('master')
+<article>
 
-@section('content')
-
-<!-- Post Content Column -->
-<div class="col-lg-8">
-
-    <div class="col-lg-4">
+    <div class="col-lg-9">
 
           <!-- Title -->
           <h2>{{$post->title}}</h2>
 
-       {{ $post->created_at->toFormattedDateString() }}
+       on {{ $post->created_at->toFormattedDateString() }}  by <a href="#"> Choudary</a>
 
-       <p>{{ str_limit($post->body, 50) }}</p>
+       <hr>
 
-       <p><a class="btn btn-primary" href="{{ action('PostController@show', $post) }}" role="button">View details &raquo;</a></p>
+       <p>{{ str_limit($post->body, 100) }}</p>
 
-    </div>
- 
-<!--     <div class="col-lg-4">
- -->
-        <!-- Title -->
-         <!--  <h2>{{$post->title}}</h2>
+       <p><a class="btn btn-primary" href="{{ action('PostController@show', $post) }}" role="button">Read More &raquo;</a></p>
 
-       {{ $post->created_at->toFormattedDateString() }}
+	</div>
 
-       <p>{{$post->body}} </p>
-
-       <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
-       
-    </div> -->
-
-</div>
-  @endsection
+</article>
